@@ -117,7 +117,7 @@ def make_distance_matrix_symmetric(num_cities):
 ############ supplied internally as the default file or via a command line execution.      ############
 ############ if your input file does not exist then the program will crash.                ############
 
-input_file = "AISearchfile535.txt"
+input_file = "AISearchfile180.txt"
 
 #######################################################################################################
 
@@ -404,7 +404,7 @@ def geneticAlgorithm(cityList, popSize, mutationRate, generations):
 
 cityList = list(range(len(distance_matrix[0])));
 start = timeit.default_timer()
-tour, tour_length = geneticAlgorithm(cityList, 100, 0.01, 500);
+tour, tour_length = geneticAlgorithm(cityList, 100, 0.01, 350);
 stop = timeit.default_timer()
 print('Time: ', stop - start)
 print(tour_length);
