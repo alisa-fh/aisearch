@@ -360,10 +360,10 @@ def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations):
 
 cityList = list(range(len(distance_matrix[0])));
 
-theSize = len(cityList)*7;
-theEliteSize = round(theSize / 6);
+#theSize = len(cityList)*7;
+#theEliteSize = round(theSize / 6);
 start = timeit.default_timer()
-finalTour, tour_length = geneticAlgorithm(population=cityList, popSize=theSize, eliteSize=theEliteSize, mutationRate=0.01, generations=500);
+finalTour, tour_length = geneticAlgorithm(population=cityList, popSize=100, eliteSize=20, mutationRate=0.01, generations=500);
 stop = timeit.default_timer()
 print('Time: ', stop - start)
 print(finalTour);

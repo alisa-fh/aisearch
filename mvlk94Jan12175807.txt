@@ -1,0 +1,4 @@
+USER = mvlk94 (Alisa Hussain)
+ALGORITHM = GA, FILENAME = AISearchfile012
+NUMBER OF CITIES = 12, TOUR LENGTH = 86
+0,5,10,1,8,3,7,4,6,2,11,9

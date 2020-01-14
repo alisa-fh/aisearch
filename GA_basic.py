@@ -111,7 +111,7 @@ def make_distance_matrix_symmetric(num_cities):
 ############ supplied internally as the default file or via a command line execution.      ############
 ############ if your input file does not exist then the program will crash.                ############
 
-input_file = "AISearchfile535.txt"
+input_file = "AISearchfile017.txt"
 
 #######################################################################################################
 
@@ -211,6 +211,7 @@ codes_and_names = {'BF' : 'brute-force search',
 #######################################################################################################
 
 import timeit, numpy as np;
+
 
 def chooseParents(fitnessArr):
     deg = random.random() * 360;
@@ -316,6 +317,7 @@ def reproduce(parent1, parent2, mutationRate):
         swapVal = newChild[randInd1];
         newChild[randInd1] = newChild[randInd2];
         newChild[randInd2] = swapVal;
+    print(Fitness(newChild).routeDistance());
     return newChild;
 
 
@@ -356,7 +358,7 @@ def geneticAlgorithm(cityList, popSize, mutationRate, generations):
 
 cityList = list(range(len(distance_matrix[0])));
 start = timeit.default_timer()
-tour, tour_length = geneticAlgorithm(cityList, 100, 0.01, 500);
+tour, tour_length = geneticAlgorithm(cityList, 100, 0.01, 600000);
 stop = timeit.default_timer()
 print('Time: ', stop - start)
 print(tour_length);
@@ -418,19 +420,3 @@ if flag == "good":
         f.write("\nNOTE = " + added_note)
     f.close()
     print("I have successfully written the tour to the output file " + output_file_name + ".")
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
